@@ -85,6 +85,7 @@ class Settings
 		'goods' => ['name' => 'Товары'],
 		'rooms' => ['name' => 'Бренды'],
 		'tips' => ['name' => 'Фото работ'],
+		'questions' => ['name' => 'Вопросы'],
 		'phones' => ['name' => 'Телефоны'],
 		'emails' => ['name' => 'Эл. почты'],
 		'address' => ['name' => 'Адреса'],

@@ -37,13 +37,18 @@ class IndexController extends BaseUser
 			'limit' => 6
 		]);
 
+		$questions = $this->model->get('questions', [
+			'where' => ['visible' => 1],
+			'order' => ['menu_position']
+		]);
+
 		// Выпуск №128 | Вывод новостей
-		$news = $this->model->get('news', [
+		/* $news = $this->model->get('news', [
 			'where' => ['visible' => 1],
 			'order' => ['date'],
 			'order_direction' => ['DESC'],
 			'limit' => 3
-		]);
+		]); */
 
 		// Выпуск №126
 		// массив предложений (главная страница) +Выпуск №127
@@ -84,6 +89,6 @@ class IndexController extends BaseUser
 		//$goods = $this->model->getGoods();
 
 		// собираем переменные в массив и возвращаем в шаблон, что бы они стали доступными при выводе
-		return compact('sales', 'arrHits', 'goods', 'advantages', 'news', 'rooms', 'tips');
+		return compact('sales', 'arrHits', 'goods', 'advantages', 'questions', 'rooms', 'tips');
 	}
 }

@@ -175,9 +175,36 @@
 
 <?php endif; ?>
 
+<?php if (!empty($questions)) : ?>
+
+	<section8 class="page-eight eight">
+		<div class="eight__container">
+
+			<h2 class="title blog__title" style="text-align: center; font-size: 28px; font-weight:700">Часто задаваемые вопросы:</h2>
+
+			<div class="eight__rightside">
+				<div data-spollers class="spollers">
+
+					<?php foreach ($questions as $item) : ?>
+
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title"><?= $item['name'] ?></button>
+							<div class="spollers__body"><?= $item['content'] ?></div>
+						</div>
+
+					<?php endforeach; ?>
+
+				</div>
+			</div>
+
+		</div>
+	</section8>
+
+<?php endif; ?>
+
 <div class="s-content" style="margin: 35px 0">
 	<div class="content-block _container">
-		<p class="text-attention"><?= $this->set['keywords'] ?> купить в Донецке, Макеевке, ДНР - в СтройЭксперт по адресу: <?= $this->set['address'] ?>. Сделать заказ можно по тел. <?= $this->set['phone'] ?>. Мы сообщим вам о наличии товара и его стоимость на текущий момент при уточнении деталей заказа. Цены доступные. Есть возможность доставки по Донецку, Макеевке, ДНР</p>
+		<p class="text-attention"><?= $this->set['keywords'] ?> купить в Донецке, Макеевке, ДНР в СтройЭксперт по адресу: <?= $this->set['address'] ?>. Сделать заказ можно по тел. <?= $this->set['phone'] ?>. Мы сообщим вам о наличии товара и его стоимость на текущий момент при уточнении деталей заказа. Цены доступные. Есть возможность доставки по Донецку, Макеевке, ДНР</p>
 
 		<p class="text"> Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями статьи 437 Гражданского кодекса РФ.</p>
 	</div>
