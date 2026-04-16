@@ -97,9 +97,44 @@
 
 				<?php endif; ?>
 
+				<?php if ($data['name'] !== 'Каталог') : ?>
+
+					<section class="plant__body plant">
+						<div class="plant__container">
+							<div class="plant__content">
+
+								<h2 class="plant__title"><?= $data['name'] . ' Донецк, Макеевка, ДНР' ?></h2>
+								<div class="plant__text">
+									<?= $data['content'] ?>
+								</div>
+
+							</div>
+							<div class="plant__related related-plant">
+
+								<div class="related-plant__body">
+
+									<article class="related-plant__item how">
+										<div class="how__body how__body_h ">
+											<div class="how__info">
+												<h3 class="how__title how__title_l sub-title"><?= ' Купить ' . $data['name'] . ' в Донецке, Макеевке, ДНР' ?></h3>
+												<div class="how__text how__text_l"><?= $data['keywords'] ?></div>
+											</div>
+											<a href="mailto:<?= $this->set['email'] ?>" class="how__button btn btn_w">Написать на эл.почту</a>
+										</div>
+										<div class="plant__image">
+											<img src="<?= $this->img($data['img']) ?>" alt="<?= $data['name'] ?>">
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<?php endif; ?>
+
 				<div class="s-content" style="margin-top: 35px">
 					<div class="content-block">
-						<p class="text-attention"><?= ($data['name'] !== 'Каталог') ? $data['name'] : $this->set['keywords'] ?> купить в Донецке, Макеевке ДНР в СтройЭксперт по адресу: <?= $this->set['address'] ?>. Сделать заказ можно по тел. <?= $this->set['phone'] ?>. Цены доступные. В ассортименте есть <?= ($data['name'] !== 'Каталог') ? $data['name'] : $this->set['keywords'] ?> от известных производителей. Есть возможность доставки по Донецку, Макеевке, ДНР</p>
+						<p class="text-attention"><?= ($data['name'] !== 'Каталог') ? $data['name'] : $this->set['keywords'] ?> купить в Донецке, Макеевке, ДНР в СтройЭксперт по адресу: <?= $this->set['address'] ?>. Сделать заказ можно по тел. <?= $this->set['phone'] ?>. Цены доступные. Есть возможность доставки по Донецку, Макеевке, ДНР</p>
 						<!-- <h3 class="title-block">Беговелы для детей</h3> -->
 						<p class="text"> Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями статьи 437 Гражданского кодекса РФ.</p>
 					</div>

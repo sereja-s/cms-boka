@@ -39,7 +39,8 @@ class CatalogController extends BaseUser
 						'fields' => ['goods_id'],
 						'on' => ['id', 'catalog_id']
 					]
-				]
+				],
+				//'join_structure' => true
 			]);
 
 			if (!$data) {
@@ -65,6 +66,9 @@ class CatalogController extends BaseUser
 					$where['id'][] = $this->clearNum($item['goods_id']);
 				}
 				$data['name'] = $data[0]['name'];
+				$data['keywords'] = $data[0]['keywords'];
+				$data['content'] = $data[0]['content'];
+				$data['img'] = $data[0]['img'];
 				$where['id'] = implode(',', $where['id']);
 				$goodsOperand = 'IN';
 			} else {
