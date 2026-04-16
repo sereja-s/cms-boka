@@ -135,7 +135,7 @@ class CatalogController extends BaseUser
 
 			'цене' => 'price_asc',
 
-			'названию' => 'name_asc'
+			'названию' => 'name_desc'
 
 		];
 

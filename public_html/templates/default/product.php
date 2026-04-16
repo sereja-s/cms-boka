@@ -3,39 +3,9 @@
 	<section class="page__products products">
 
 		<div class="products__container _container">
-
-			<h1 style="margin-top: 100px;" class="products__title _title"><?= $data['name'] ?></h1>
-
+			<h1 class="products__title-cat _title"><?= $data['name'] ?></h1>
 			<div class="products__items">
-
-				<article class="products__item item-product">
-
-					<!-- <div class="item-product__labels">
-
-						<?php if (!empty($data['new'])) : ?>
-
-							<div class="item-product__label item-product__label_new">New</div>
-
-						<?php endif; ?>
-
-						<?php if (!empty($data['discount'])) : ?>
-
-							<div class="item-product__label item-product__label_sale">-<?= $data['discount'] ?>%</div>
-
-						<?php endif; ?>
-
-					</div> -->
-
-					<!-- <div class="item-product__labels--prem">
-
-						<?php if (!empty($data['hit'])) : ?>
-
-							<div class="item-product__label--prem">Хит продаж</div>
-
-						<?php endif; ?>
-
-					</div> -->
-
+				<div class="products__item item-product">
 					<div class="item-product__image _ibg">
 						<img src="<?= $this->img($data['img']) ?>" alt="<?= $data['name'] ?>">
 					</div>
@@ -77,10 +47,8 @@
 						</div>
 
 					</div>
-				</article>
-
+				</div>
 			</div>
-
 		</div>
 
 	</section>

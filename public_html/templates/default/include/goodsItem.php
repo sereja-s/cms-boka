@@ -2,7 +2,7 @@
 
 <?php if (!empty($data)) : ?>
 
-	<article class="products__item item-product">
+	<a href="<?= $this->alias(['product' => $data['alias']]) ?>" class="products__item item-product">
 
 		<div class="item-product__labels">
 
@@ -30,12 +30,12 @@
 
 		</div>
 
-		<a href="<?= $this->alias(['product' => $data['alias']]) ?>" class="item-product__image _ibg">
+		<div class="item-product__image _ibg">
 			<img src="<?= $this->img($data['img']) ?>" alt="<?= $data['name'] ?>">
-		</a>
+		</div>
 		<div class="item-product__body">
 			<div class="item-product__content">
-				<h3 class="item-product__title"><?= $data['name'] ?></h3>
+				<h2 class="item-product__title"><?= $data['name'] ?></h2>
 				<div class="item-product__text"><?= $data['short_content'] ?></div>
 
 				<?php if ($data['price'] || $data['price_m_opt']) : ?>
@@ -61,8 +61,8 @@
 					</div>
 
 				<?php endif; ?>
-
 			</div>
-	</article>
+		</div>
+	</a>
 
 <?php endif; ?>

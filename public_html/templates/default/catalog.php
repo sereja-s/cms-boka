@@ -4,7 +4,7 @@
 
 		<div class="products__container _container">
 
-			<h1 style="margin-top: 100px;" class="products__title _title"><?= $data['name'] ?></h1>
+			<h1 class="products__title-cat _title"><?= $data['name'] ?></h1>
 
 			<?php if (empty($goods)) : ?>
 
@@ -40,10 +40,6 @@
 												</li>
 
 											<?php endforeach; ?>
-
-											<!-- <li class="menu__sub-item">
-												<a href="#" class="menu__sub-link">цене</a>
-											</li> -->
 
 										</ul>
 
@@ -102,21 +98,17 @@
 					<section class="plant__body plant">
 						<div class="plant__container">
 							<div class="plant__content">
-
-								<h2 class="plant__title"><?= $data['name'] . ' Донецк, Макеевка, ДНР' ?></h2>
+								<h3 class="plant__title"><?= $data['name'] . ' Донецк, Макеевка, ДНР' ?></h3>
 								<div class="plant__text">
 									<?= $data['content'] ?>
 								</div>
-
 							</div>
 							<div class="plant__related related-plant">
-
 								<div class="related-plant__body">
-
-									<article class="related-plant__item how">
+									<div class="related-plant__item how">
 										<div class="how__body how__body_h ">
 											<div class="how__info">
-												<h3 class="how__title how__title_l sub-title"><?= ' Купить ' . $data['name'] . ' в Донецке, Макеевке, ДНР' ?></h3>
+												<h4 class="how__title how__title_l sub-title"><?= ' Купить ' . $data['name'] . ' в Донецке, Макеевке, ДНР' ?></h4>
 												<div class="how__text how__text_l"><?= $data['keywords'] ?></div>
 											</div>
 											<a href="mailto:<?= $this->set['email'] ?>" class="how__button btn btn_w">Написать на эл.почту</a>
@@ -124,7 +116,7 @@
 										<div class="plant__image">
 											<img src="<?= $this->img($data['img']) ?>" alt="<?= $data['name'] ?>">
 										</div>
-									</article>
+									</div>
 								</div>
 							</div>
 						</div>
