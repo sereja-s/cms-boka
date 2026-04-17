@@ -128,6 +128,8 @@
 
 										<?php endif; ?>
 
+										<li class="menu__item"><a href="<?= $this->alias('contacts') ?>" class="menu__link">Контакты</a></li>
+
 									</ul>
 								</nav>
 							</div>

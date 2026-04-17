@@ -202,6 +202,12 @@
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 <!-- <script src="js/vendors.min.js"></script>
 <script src="js/app.min.js"></script> -->
+<script>
+	var ForJS = {};
+	/* укажем для описания полного пути к маркеру(картинки-лого) на карте */
+	/* Остальное описано в main.js  */
+	ForJS.imgMap = '<?= $this->img($this->set['main_img']) ?>';
+</script>
 
 <?php $this->getScripts() ?>
 

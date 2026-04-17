@@ -89,6 +89,7 @@ class Settings
 		'phones' => ['name' => 'Телефоны'],
 		'emails' => ['name' => 'Эл. почты'],
 		'address' => ['name' => 'Адреса'],
+		'contacts_page' => ['name' => 'Страница Контакты'],
 		//'news' => ['name' => 'Новости'],
 		'information' => ['name' => 'Информация (меню)'],
 		'settings' => ['name' => 'Настройки (о сайте)'],
@@ -107,8 +108,8 @@ class Settings
 	// свойство: массив шаблонов
 	private $templateArr = [
 		// массив вида: 'название шаблона' => массив с полями для которых должен быть подключен соответствующий шаблон
-		'text' => ['name', 'phone', 'email', 'alias', 'external_alias', 'external_alias_max', 'sub_title', 'number_of_years', 'discount', 'price', 'price_m_opt', 'login', 'password'],
-		'textarea' => ['content', 'keywords', 'address', 'description', 'short_content'],
+		'text' => ['name', 'phone', 'email', 'alias', 'external_alias', 'external_alias_max', 'sub_title', 'data_coordinates', 'discount', 'price', 'price_m_opt', 'login', 'password'],
+		'textarea' => ['content', 'keywords', 'address', 'description', 'short_content', 'working_time'],
 		'radio' => ['visible', 'show_top_menu', 'hit', 'new'/*'sale', 'hot'*/],
 		'checkboxlist' => ['catalog'/* , 'filters' */], // указали, что хотим подключить фильтры к связанной таблице: 
 		// товары (они прописаны в массиве: в свойстве: private $manyToMany)
@@ -130,6 +131,7 @@ class Settings
 		'phone' => ['Телефон'],
 		'email' => ['Электронная почта'],
 		'address' => ['Адрес'],
+		'working_time' => ['График работы'],
 		'alias' => ['Ссылка ЧПУ'],
 		'external_alias' => ['Внешняя ссылка'],
 		'img' => ['Изображение', '(Одно)'],
