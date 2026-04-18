@@ -24,9 +24,7 @@ class ProductController extends BaseUser
 		]);
 
 		if (!$data) {
-
-			//throw new RouteException('Отсутствует товар по ссылке ' . $this->parameters['alias']);
-			$this->redirect($this->alias());
+			throw new RouteException('Отсутствует товар по ссылке ' . $this->parameters['alias']);
 		}
 
 		$data = array_shift($data);

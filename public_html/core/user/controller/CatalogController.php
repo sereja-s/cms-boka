@@ -43,10 +43,9 @@ class CatalogController extends BaseUser
 				//'join_structure' => true
 			]);
 
+			/* здесь была ошибка -> вместо точки (конкатенации) стояла запятая и передавался второй аргумент в функцию RouteException() - $code = $this->parameters['alias'], хотя должен быть только первый параметр, а второй не передаётся и по умолчанию $code = 0 */
 			if (!$data) {
-
-				//throw new RouteException('Не найдены записи в таблице catalog по ссылке ', $this->parameters['alias']);
-				$this->redirect($this->alias());
+				throw new RouteException('Не найдены записи в таблице catalog по ссылке ' . $this->parameters['alias']);
 			}
 
 			//$data = $data[0];
