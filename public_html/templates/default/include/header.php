@@ -10,13 +10,13 @@
 	<meta name="description" content="<?= $data['name'] ? $data['name'] . ' купить в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? '. Текущая страница каталога - ' . $page : '') : $this->set['meta_description'] . ' , тел. ' . $this->set['phone'] ?>">
 	<meta name="keywords" content="<?= $data['name'] ? $data['name'] . ', ' : '' ?><?= $this->set['meta_keywords'] ?>">
 
-	<meta property="og:title" content="<?= $this->set['meta_title'] ?><?= $data['name'] ? ' | ' . $data['name'] : '' ?>" />
+	<meta property="og:title" content="<?= $this->set['meta_name'] ?><?= $data['name'] ? ' | ' . $data['name'] : '' ?>" />
 	<meta property="og:description" content="<?= $data['name'] ? $data['name'] . ' заказать в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? '. страница каталога - ' . $page : '') : $this->set['meta_og_description'] . ' , тел. ' . $this->set['phone'] ?>" />
 	<meta property="og:image" content="/favicon.svg" />
 
 	<link rel="icon" href="<?= SITE_URL ?>/favicon.svg" type="image/svg+xml">
 
-	<title><?= $this->set['meta_title'] ?><?= $data['name'] ? ' | ' . $data['name'] . ($page ? ' - страница ' . $page : '') : '' ?></title>
+	<title><?= $data['name'] ?  $data['name'] . ($page ? ' - страница ' . $page : '') . ' | ' . $this->set['meta_title'] : $this->set['meta_title'] ?></title>
 
 	<?php $this->getStyles() ?>
 </head>
