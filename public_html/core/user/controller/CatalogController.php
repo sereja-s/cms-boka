@@ -116,11 +116,13 @@ class CatalogController extends BaseUser
 			]
 		], $catalogFilters, $catalogPrices);
 
+		$page = $_GET['page'] ?? '';
+
 		// Выпуск №136
 		// сохраним результат работы метода (формирует и возвращает массив с постраничной навигацией) в BaseModelMethods.php
 		$pages = $this->model->getPagination();
 
-		return compact('data', 'catalogFilters', 'catalogPrices', 'goods', 'order', 'quantities', 'pages');
+		return compact('data', 'catalogFilters', 'catalogPrices', 'goods', 'order', 'quantities', 'pages', 'page');
 	}
 
 

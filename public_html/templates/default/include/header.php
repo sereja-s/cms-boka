@@ -2,27 +2,21 @@
 <html lang="ru">
 
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <link rel="stylesheet" href="css/style.min.css"> -->
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta name="description" content="<?= $this->set['description'] ?>">
-	<meta name="keywords" content="<?= $this->set['keywords'] ?>">
+	<meta name="description" content="<?= $data['name'] ? $data['name'] . ' купить в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? '. Текущая страница каталога - ' . $page : '') : $this->set['meta_description'] . ' , тел. ' . $this->set['phone'] ?>">
+	<meta name="keywords" content="<?= $data['name'] ? $data['name'] . ', ' : '' ?><?= $this->set['meta_keywords'] ?>">
 
-	<meta property="og:title" content="<?= $this->set['name'] ?>" />
-	<meta property="og:description" content="<?= $this->set['description'] ?>" />
-	<meta property="og:image" content="<?= $this->img($this->set['main_img']) ?>" />
+	<meta property="og:title" content="<?= $this->set['meta_title'] ?><?= $data['name'] ? ' | ' . $data['name'] : '' ?>" />
+	<meta property="og:description" content="<?= $data['name'] ? $data['name'] . ' заказать в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? '. страница каталога - ' . $page : '') : $this->set['meta_og_description'] . ' , тел. ' . $this->set['phone'] ?>" />
+	<meta property="og:image" content="/favicon.svg" />
 
-	<link rel="icon" href="https://dss-krovlya.ru/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?= SITE_URL ?>/favicon.svg" type="image/svg+xml">
 
-
-
-	<title><?= $this->set['name'] ?></title>
+	<title><?= $this->set['meta_title'] ?><?= $data['name'] ? ' | ' . $data['name'] . ($page ? ' - страница ' . $page : '') : '' ?></title>
 
 	<?php $this->getStyles() ?>
 </head>

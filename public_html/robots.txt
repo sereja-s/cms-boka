@@ -1,5 +1,3 @@
-User-agent: *
- 
-Disallow:/admin/ 
-
-Sitemap: https://dss-krovlya.ru/sitemap.xml
+User-agent: * 
+Disallow:/admin/
+Sitemap: http://cms-boka/sitemap.xml
