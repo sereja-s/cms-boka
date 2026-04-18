@@ -297,12 +297,16 @@ function createFile() {
 			// на контейнер повесим событие: click
 			container.addEventListener('click', function () {
 
-				// метод: remove() удаляет элемент со всеми его обработчиками событий
+				let isDel = confirm("Удалить это изображение из галереи изображений ?");
+
+				if (isDel) {
+					// метод: remove() удаляет элемент со всеми его обработчиками событий
 				this.remove();
 
 				// обращаемся к ячейке: fileStore[fileName][elId] и удаляем её с помощью инструкции: delete
 				// (при этом элемента в массиве не будет, но длина массива не изменится)
 				delete fileStore[fileName][elId];
+				 }				
 
 				//console.log(fileStore);
 			})
