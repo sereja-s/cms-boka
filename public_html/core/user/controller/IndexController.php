@@ -81,7 +81,7 @@ class IndexController extends BaseUser
 				'where' => [$type => 1, 'visible' => 1], // +Выпуск №127
 				'order' => ['datetime'],
 				'order_direction' => ['DESC'],
-				'limit' => 7 // выводим не более 7 товаров у которых включены соответствующие предложения
+				'limit' => 12 // выводим не более 7 товаров у которых включены соответствующие предложения
 			]);
 		}
 
