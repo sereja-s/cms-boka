@@ -80,7 +80,7 @@ class CatalogController extends BaseUser
 		}
 
 		if (!$data) {
-			$data['name'] = 'Каталог';
+			$data['name'] = $this->set['meta_title'];
 		}
 
 		// +Выпуск №131

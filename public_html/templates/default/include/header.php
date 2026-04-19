@@ -4,19 +4,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta name="description" content="<?= $data['name'] ? $data['name'] . ' купить в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? '. Текущая страница каталога - ' . $page : '') : $this->set['meta_description'] . ' , тел. ' . $this->set['phone'] ?>">
+	<meta name="description" content="<?= $data['name'] ? $data['name'] . ' купить в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? ' - текущая страница ' . $page : '') : $this->set['meta_description'] . ', тел. ' . $this->set['phone'] . ($infoData['name'] ? ' - ' . $infoData['name'] : '') ?>">
+
 	<meta name="keywords" content="<?= $data['name'] ? $data['name'] . ', ' : '' ?><?= $this->set['meta_keywords'] ?>">
 
-	<meta property="og:title" content="<?= $this->set['meta_name'] ?><?= $data['name'] ? ' | ' . $data['name'] : '' ?>" />
-	<meta property="og:description" content="<?= $data['name'] ? $data['name'] . ' заказать в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? '. страница каталога - ' . $page : '') : $this->set['meta_og_description'] . ' , тел. ' . $this->set['phone'] ?>" />
-	<meta property="og:image" content="/favicon.svg" />
+	<meta property="og:title" content="<?= $data['name'] ?  $data['name'] . ' | ' . $this->set['meta_name'] : $this->set['meta_name'] . ' | ' . $this->set['meta_title'] . ($infoData['name'] ? ' - ' . $infoData['name'] : '') ?>">
+
+	<meta property="og:description" content="<?= $data['name'] ? $data['name'] . ' заказать в Донецке, Макеевке, ДНР по выгодной цене с доставкой или самовывозом, тел. ' . $this->set['phone'] . ($page ? '. страница каталога - ' . $page : '') : $this->set['meta_og_description'] . ', тел. ' . $this->set['phone'] . ($infoData['name'] ? ' - ' . $infoData['name'] : '') ?>">
+
+	<meta property="og:image" content="/favicon.svg">
 
 	<link rel="icon" href="<?= SITE_URL ?>/favicon.svg" type="image/svg+xml">
 
-	<title><?= $data['name'] ?  $data['name'] . ($page ? ' - страница ' . $page : '') . ' | ' . $this->set['meta_title'] : $this->set['meta_title'] ?></title>
+	<title><?= $data['name'] ?  $data['name'] . ($page ? ' - страница ' . $page : '') . ' | ' . $this->set['meta_name'] : $this->set['meta_name'] . ' | ' . $this->set['meta_title'] . ($infoData['name'] ? ' - ' . $infoData['name'] : '') ?></title>
 
 	<?php $this->getStyles() ?>
 </head>

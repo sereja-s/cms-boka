@@ -21,12 +21,12 @@ class ContactsController extends BaseUser
 
 		$contacts_page && $contacts_page = $contacts_page[0];
 
-		$data = [];
+		//$data = [];
 
-		$data['name'] = $contacts_page['name'];
-		$data['title'] = $contacts_page['title'];
+		$infoData['name'] = $contacts_page['name'];
+		//$infoData['title'] = $contacts_page['title'];
 
 		// собираем переменные в массив и возвращаем в шаблон, что бы они стали доступными при выводе
-		return compact('contacts_page', 'data');
+		return compact('contacts_page', 'infoData');
 	}
 }
